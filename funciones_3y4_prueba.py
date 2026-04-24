@@ -21,11 +21,13 @@ def conectar_bd():
             print(f"✓ Conectado a MySQL Server versión {db_info}")
             return conexion
     except Error as e:
-        print(f"✗ Error al conectar: {e}")
+        print(f" Error al conectar: {e}")
         return None
 
 def cerrar_bd(conexion):
     """Cierra la conexión"""
     if conexion and conexion.is_connected():
         conexion.close()
-        print("✓ Conexión cerrada")
+        print(" Conexión cerrada")
+
+conexion = conectar_bd()
