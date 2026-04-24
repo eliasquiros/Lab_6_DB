@@ -31,3 +31,19 @@ def cerrar_bd(conexion):
         print(" Conexión cerrada")
 
 conexion = conectar_bd()
+def prueba_fn_espia_tortuga():
+    cursor = conexion.cursor()
+
+    categoria = 'Caramelos'
+    precio_finca = 100.0
+
+    cursor.execute("SELECT fn_espia_tortuga(%s, %s)", (categoria, precio_finca))
+    resultado = cursor.fetchone()[0]
+
+    print(f"Categoría: {categoria}")
+    print(f"Precio finca: ${precio_finca}")
+    print(f"Resultado con factor: ${resultado}")
+
+    cursor.close()
+    conexion.close()    
+# Efectivamente ejecuta correctamente dentro de la BD
