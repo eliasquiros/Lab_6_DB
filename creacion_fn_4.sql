@@ -4,9 +4,9 @@ READS SQL DATA
 BEGIN 
     DECLARE v_nuevo_nombre VARCHAR (100);
     
-    SET v_nuevo_nombre = REGEXP_REPLACE(p_texto, '[^a-zA-Z]', '');
+    SET v_nuevo_nombre = REGEXP_REPLACE(p_nombre_sucio, '[^a-zA-ZáéíóúÁÉÍÓÚñÑ]', '');
     
-    SET v_nuevo_nombre = TRIM(p_nuevo_nombre);
+    SET v_nuevo_nombre = TRIM(v_nuevo_nombre);
 
     RETURN v_nuevo_nombre;
 END;
