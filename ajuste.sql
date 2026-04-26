@@ -109,7 +109,7 @@ END$$
 
 DELIMITER ;
 
-/*--Llave 7 
+--Llave 7 
 DELIMITER $$
 
 CREATE FUNCTION fn_gran_sello(p_texto TEXT)
