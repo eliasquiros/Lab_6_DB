@@ -58,7 +58,7 @@ INSERT INTO inventario_pirata (id, nombre_sucio, categoria, precio_finca, priori
 --Llave 5 
 DELIMITER $$
 
-/*CREATE FUNCTION fn_escultor(p_texto TEXT, p_factor DECIMAL(3,2))
+CREATE FUNCTION fn_escultor(p_texto TEXT, p_factor DECIMAL(3,2))
 RETURNS TEXT
 DETERMINISTIC
 BEGIN
@@ -81,8 +81,9 @@ BEGIN
 END$$
 
 DELIMITER ;
+
 -- Llave 6: función notario
-//DELIMITER $$
+DELIMITER $$
 
 CREATE FUNCTION fn_notario(p_texto TEXT)
 RETURNS TEXT
@@ -107,7 +108,8 @@ BEGIN
 END$$
 
 DELIMITER ;
---Llave 7 
+
+/*--Llave 7 
 DELIMITER $$
 
 CREATE FUNCTION fn_gran_sello(p_texto TEXT)
@@ -127,7 +129,7 @@ BEGIN
     RETURN v_hash;
 END$$
 
-DELIMITER ;*/
+DELIMITER ;
 
 -- ==========================================================
 -- RESULTADO FINAL ESPERADO (VERIFICACIÓN)
