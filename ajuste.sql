@@ -58,7 +58,7 @@ INSERT INTO inventario_pirata (id, nombre_sucio, categoria, precio_finca, priori
 --Llave 5 
 DELIMITER $$
 
-CREATE FUNCTION fn_escultor(p_texto TEXT, p_factor DECIMAL(3,2))
+CREATE FUNCTION fn_escultor(p_texto TEXT, p_factor DECIMAL(10,2))
 RETURNS TEXT
 DETERMINISTIC
 BEGIN
