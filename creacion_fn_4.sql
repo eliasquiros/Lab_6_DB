@@ -1,3 +1,6 @@
+DELIMITER $$
+
+
 CREATE FUNCTION fn_purificador(p_nombre_sucio VARCHAR (100))
 RETURNS VARCHAR(100)
 READS SQL DATA
@@ -9,4 +12,6 @@ BEGIN
     SET v_nuevo_nombre = TRIM(v_nuevo_nombre);
 
     RETURN v_nuevo_nombre;
-END;
+END$$
+
+DELIMITER ;
